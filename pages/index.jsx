@@ -1,4 +1,3 @@
-import Navbar from "../components/navbar/Navbar";
 import { useState, useEffect } from "react";
 
 const Home = () => {
@@ -13,7 +12,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <h1>Nextjs 2020</h1>
       {productList.map((product) => (
         <p>{product.name}</p>
