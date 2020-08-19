@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@components/": ["components/*"],
-      "@database": ["database/db.ts"]
+      "@components/*": ["components/*"],
+      "@database/*": ["database/*"]
     }
   }
 }
