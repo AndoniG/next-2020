@@ -1,13 +1,16 @@
-import Navbar from "../navbar/Navbar";
+import { Container } from "semantic-ui-react";
 
-const Layout = ({ children }) => {
-  return (
-    <React.Fragment>
-      <Navbar />
+import Navbar from "@components/Navbar/Navbar";
+import Footer from "@components/Footer/Footer";
+
+const Layout = ({ children }) => (
+  <React.Fragment>
+    <Navbar />
+    <Container as="main" text>
       {children}
-      <footer>This is the footer</footer>
-    </React.Fragment>
-  );
-};
+    </Container>
+    <Footer />
+  </React.Fragment>
+);
 
 export default Layout;

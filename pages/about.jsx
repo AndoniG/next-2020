@@ -1,9 +1,26 @@
-const About = () => {
+import { useState, useEffect } from "react";
+import Layout from "@components/Layout/Layout";
+import KawaiiHeader from "@components/KawaiiHeader/KawaiiHeader";
+import ProductList from "@components/ProductList/ProductList";
+
+const HomePage = () => {
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    window
+      .fetch("/api/avo")
+      .then((response) => response.json())
+      .then(({ data }) => {
+        setProductList(data);
+      });
+  }, []);
+
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Layout>
+      <KawaiiHeader />
+      <ProductList products={productList} />
+    </Layout>
   );
 };
 
-export default About;
+export default HomePage;

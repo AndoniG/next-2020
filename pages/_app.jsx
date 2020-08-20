@@ -1,12 +1,17 @@
-import Layout from "@components/layout/Layout";
+import "semantic-ui-css/semantic.min.css";
+import "../global.css";
 
-function MyApp({ Component, pageProps }) {
-  // Perfect for Providers, Themes, Layouts, Props Adicionales
+import CartProvider from "@store/Cart";
+
+const MyApp = ({ Component, pageProps }) => {
+  // Aditional props
+  // Aditional layout
+  // Manejar errores - componentDidCatch
   return (
-    <Layout>
+    <CartProvider>
       <Component {...pageProps} />
-    </Layout>
+    </CartProvider>
   );
-}
+};
 
 export default MyApp;

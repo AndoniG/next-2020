@@ -1,23 +1,26 @@
 import { useState, useEffect } from "react";
+import Layout from "@components/Layout/Layout";
+import KawaiiHeader from "@components/KawaiiHeader/KawaiiHeader";
+import ProductList from "@components/ProductList/ProductList";
 
-const Home = () => {
+const HomePage = () => {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
     window
       .fetch("/api/avo")
       .then((response) => response.json())
-      .then(({ data }) => setProductList(data));
+      .then(({ data }) => {
+        setProductList(data);
+      });
   }, []);
 
   return (
-    <div>
-      <h1>Nextjs 2020</h1>
-      {productList.map((product) => (
-        <p>{product.name}</p>
-      ))}
-    </div>
+    <Layout>
+      <KawaiiHeader />
+      <ProductList products={productList} />
+    </Layout>
   );
 };
 
-export default Home;
+export default HomePage;
