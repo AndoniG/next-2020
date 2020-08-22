@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Transition } from "semantic-ui-react";
 
-import { Avocado } from "@components/SVGIcons";
+import { Avocado } from "@/components/SVGIcons";
 
 const AnimatedHeader = ({ visible, onClick, onComplete }) => (
   <Header size="huge" as="h1" onClick={onClick}>
