@@ -1,7 +1,7 @@
 import "semantic-ui-css/semantic.min.css";
 import "../global.css";
 
-import CartProvider from "../store/Cart";
+import CartProvider from "@store/Cart";
 
 const MyApp = ({ Component, pageProps }) => {
   // Aditional props

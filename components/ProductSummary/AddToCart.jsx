@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Input, Icon, Transition } from "semantic-ui-react";
-import { useCartMutations } from "../../store/Cart";
+import { useCartMutations } from "@store/Cart";
 
 // Fake a server Response, we don't care on this project
 // about data persistency, but you may add it :)

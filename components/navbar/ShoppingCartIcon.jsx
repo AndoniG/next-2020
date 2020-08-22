@@ -1,4 +1,4 @@
-import { Basket } from "../SVGIcons";
+import { Basket } from "@components/SVGIcons";
 
 const ShoppingCartIcon = ({ cartCount, name }) => {
   const showCartCount = () => {
