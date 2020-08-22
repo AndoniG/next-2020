@@ -1,6 +1,6 @@
 import { Grid, Header } from "semantic-ui-react";
 
-import { PosMeMuero } from "@components/SVGIcons";
+import { PosMeMuero } from "../SVGIcons";
 
 const ModalHeaderContent = () => {
   return (
